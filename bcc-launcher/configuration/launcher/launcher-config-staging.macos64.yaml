@@ -1,0 +1,53 @@
+#TODO Klarity, x509, awstest 
+walletLogging: true
+nodeArgs:
+- --tlsca
+- ${HOME}/Library/Application Support/The-Blockchain-Company Staging/tls/server/ca.crt
+- --tlscert
+- ${HOME}/Library/Application Support/The-Blockchain-Company Staging/tls/server/server.crt
+- --tlskey
+- ${HOME}/Library/Application Support/The-Blockchain-Company Staging/tls/server/server.key
+- --no-client-auth
+- --log-console-off
+- --update-server
+- https://update-awstest.bcccoindev.io
+- --keyfile
+- ${HOME}/Library/Application Support/The-Blockchain-Company Staging/Secrets-1.0/secret.key
+- --topology
+- ${The-Blockchain-Company_INSTALL_DIRECTORY}/wallet-topology.yaml
+- --wallet-db-path
+- ${HOME}/Library/Application Support/The-Blockchain-Company Staging/Wallet-1.0
+- --update-latest-path
+- ${HOME}/Library/Application Support/The-Blockchain-Company Staging/installer.pkg
+- --wallet-address
+- 127.0.0.1:0
+- --update-with-package
+- --metrics
+- --ekg-server
+- localhost:8082
+- +RTS
+- -T
+- -RTS
+statePath: ${HOME}/Library/Application Support/The-Blockchain-Company Staging
+walletPath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/Frontend
+nodePath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/bcc-node
+launcherLogsPrefix: ${HOME}/Library/Application Support/The-Blockchain-Company Staging/Logs/pub/
+walletArgs: []
+nodeDbPath: ${HOME}/Library/Application Support/The-Blockchain-Company Staging/DB-1.0
+updaterPath: /usr/bin/open
+workingDir: ${HOME}/Library/Application Support/The-Blockchain-Company Staging
+frontendOnlyMode: true
+nodeLogPath: null
+updaterArgs:
+- -FW
+logsPrefix: ${HOME}/Library/Application Support/The-Blockchain-Company Staging/Logs
+configuration:
+  seed: null
+  filePath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/configuration.yaml
+  key: mainnet_dryrun_wallet_macos64
+  systemStart: null
+updateArchive: ${HOME}/Library/Application Support/The-Blockchain-Company Staging/installer.pkg
+nodeLogConfig: ${The-Blockchain-Company_INSTALL_DIRECTORY}/log-config-prod.yaml
+nodeTimeoutSec: 60
+tlsPath: ${HOME}/Library/Application Support/The-Blockchain-Company Staging/tls
+x509ToolPath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/bcc-x509-certificates

@@ -1,0 +1,38 @@
+#TODO update genesis block hash 
+{
+   "cliBin":"jcli",
+   "BccWalletBin":"Klarity-frontend",
+   "frontendOnlyMode":true,
+   "launcherLogsPrefix":"${XDG_DATA_HOME}/Klarity/qa/Logs/",
+   "logsPrefix":"${XDG_DATA_HOME}/Klarity/qa/Logs",
+   "nodeArgs":[
+
+   ],
+   "nodeBin":"jonah",
+   "nodeImplementation":"jonah",
+   "nodeLogConfig":null,
+   "nodeLogPath":null,
+   "nodeTimeoutSec":60,
+   "stateDir":"${XDG_DATA_HOME}/Klarity/qa",
+   "tlsPath":null,
+   "updateArchive":"/bar",
+   "updateWindowsRunner":"",
+   "updaterArgs":[
+
+   ],
+   "updaterPath":"/foo",
+   "walletArgs":[
+      "launch",
+      "--genesis-block-hash",
+      "6a40cf890d84981353457fcab6c892af57ee3c3286b33b530cd46b1af5b0e3a7",
+      "--state-dir",
+      "${XDG_DATA_HOME}/Klarity/qa",
+      "--",
+      "--config",
+      "/nix/store/vvq4bwrhgj0xh8mwk8sc71f082sycb12-jonah-config-qa.yaml"
+   ],
+   "walletBin":"klarity-jonah",
+   "walletLogging":true,
+   "workingDir":"${XDG_DATA_HOME}/Klarity/qa",
+   "x509ToolPath":null
+}

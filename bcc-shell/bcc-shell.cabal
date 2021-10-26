@@ -1,0 +1,129 @@
+cabal-version:  2.2
+name:           bcc-shell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/bcc-shell#readme>
+category:       Currency
+homepage:       https://github.com/The-Blockchain-Company/bcc-shell#readme
+bug-reports:    https://github.com/The-Blockchain-Company/bcc-shell/issues
+author:         The-Blockchain-Company
+maintainer:     operations@bcccoin.io
+copyright:      2021 The-Blockchain-Company
+license:        Apache-2.0
+license-files:  LICENSE, NOTICE
+build-type:     Simple
+extra-source-files:
+    test/js/mock-klarity.js
+
+source-repository head
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-shell
+
+library
+  exposed-modules:
+      Bcc.Shell.Lib
+    , Bcc.Shell.Types
+    -- NodeIPC
+    , Bcc.Shell.NodeIPC
+    , Bcc.Shell.NodeIPC.General
+    , Bcc.Shell.BccWalletIPC
+    -- Update system
+    , BccShellSpec
+  other-modules:
+      Bcc.Shell.NodeIPC.Lib
+    , Bcc.Shell.NodeIPC.Message
+    , Bcc.Shell.NodeIPC.ServerExample
+  hs-source-dirs:
+      src
+    , specs
+  build-depends:
+      aeson
+    , base >=4.11 && <5
+    , binary
+    , bytestring
+    , Cabal
+    , bcc-prelude
+    , concurrency
+    , containers
+    , formatting
+    , process
+    , QuickCheck
+    , safe-exceptions
+    , async
+    , text
+    , transformers
+  if os(windows)
+    build-depends:     Win32
+
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+                       OverloadedStrings
+
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wredundant-constraints
+                       -Wpartial-fields
+
+executable node-ipc
+  main-is: Main.hs
+  other-modules:
+      Paths_bcc_shell
+  hs-source-dirs:
+      app/NodeIPCClient
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bcc-shell
+    , bcc-prelude
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+                       OverloadedStrings
+
+  ghc-options:         -Wall
+                       -Werror
+                       -Wcompat
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wredundant-constraints
+                       -Wpartial-fields
+
+test-suite bcc-shell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_bcc_shell
+      BccWalletIPCSpec
+  if !os(windows)
+    other-modules:
+      NodeIPCSpec
+      NodeIPCSMSpec
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , bcc-shell
+    , bcc-prelude
+    -- quickcheck
+    , QuickCheck
+    -- SM
+    , quickcheck-state-machine >= 0.6
+    -- required because of QSM
+    , text
+    , tree-diff
+    -- tests
+    , hspec
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+                       OverloadedStrings
+
+  ghc-options:         -Wall
+                       -Werror
+                       -Wcompat
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wredundant-constraints
+                       -Wpartial-fields

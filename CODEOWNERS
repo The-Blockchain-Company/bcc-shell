@@ -1,0 +1,7 @@
+# General reviewers per PR
+*                       @rmourey26 @ - jhunter
+# Specific reviewers for code pieces
+
+doc                          @docs-access
+README.*                     @docs-access
+.readthedocs.yml             @docs-access

@@ -1,0 +1,46 @@
+#TODO klarity, x509 tool path verify
+walletLogging: false
+nodeArgs:
+- --tlsca
+- ${XDG_DATA_HOME}/Klarity/mainnet/tls/server/ca.crt
+- --tlscert
+- ${XDG_DATA_HOME}/Klarity/mainnet/tls/server/server.crt
+- --tlskey
+- ${XDG_DATA_HOME}/Klarity/mainnet/tls/server/server.key
+- --no-client-auth
+- --log-console-off
+- --update-server
+- https://update-bcc-mainnet.The-Blockchain-Company.io
+- --keyfile
+- ${XDG_DATA_HOME}/Klarity/mainnet/Secrets/secret.key
+- --topology
+- ${BccWallet_CONFIG}/wallet-topology.yaml
+- --wallet-db-path
+- ${XDG_DATA_HOME}/Klarity/mainnet/Wallet
+- --update-latest-path
+- ${XDG_DATA_HOME}/Klarity/mainnet/installer.sh
+- --wallet-address
+- 127.0.0.1:0
+- --update-with-package
+statePath: ${XDG_DATA_HOME}/Klarity/mainnet
+walletPath: Klarity-frontend
+nodePath: bcc-node
+launcherLogsPrefix: ${XDG_DATA_HOME}/Klarity/mainnet/Logs/
+walletArgs: []
+nodeDbPath: ${XDG_DATA_HOME}/Klarity/mainnet/DB/
+updaterPath: /bin/update-runner
+workingDir: ${XDG_DATA_HOME}/Klarity/mainnet
+frontendOnlyMode: true
+nodeLogPath: null
+updaterArgs: []
+logsPrefix: ${XDG_DATA_HOME}/Klarity/mainnet/Logs
+configuration:
+  seed: null
+  filePath: ${BccWallet_CONFIG}/configuration.yaml
+  key: mainnet_wallet_linux64
+  systemStart: null
+updateArchive: ${XDG_DATA_HOME}/Klarity/mainnet/installer.sh
+nodeLogConfig: ${BccWallet_CONFIG}/log-config-prod.yaml
+nodeTimeoutSec: 60
+tlsPath: ${XDG_DATA_HOME}/Klarity/mainnet/tls
+x509ToolPath: bcc-x509-certificates

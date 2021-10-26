@@ -1,0 +1,53 @@
+#TODOBccWallet, AWS S3
+walletLogging: true
+nodeArgs:
+- --tlsca
+- ${HOME}/Library/Application Support/Klarity Testnet/tls/server/ca.crt
+- --tlscert
+- ${HOME}/Library/Application Support/Klarity Testnet/tls/server/server.crt
+- --tlskey
+- ${HOME}/Library/Application Support/Klarity Testnet/tls/server/server.key
+- --no-client-auth
+- --log-console-off
+- --update-server
+- http://updates-bcc-testnet.s3.amazonaws.com
+- --keyfile
+- ${HOME}/Library/Application Support/Klarity Testnet/Secrets-1.0/secret.key
+- --topology
+- ${BccWallet_INSTALL_DIRECTORY}/wallet-topology.yaml
+- --wallet-db-path
+- ${HOME}/Library/Application Support/Klarity Testnet/Wallet-1.0
+- --update-latest-path
+- ${HOME}/Library/Application Support/Klarity Testnet/installer.pkg
+- --wallet-address
+- 127.0.0.1:0
+- --update-with-package
+- --metrics
+- --ekg-server
+- localhost:8081
+- +RTS
+- -T
+- -RTS
+statePath: ${HOME}/Library/Application Support/Klarity Testnet
+walletPath: ${BccWallet_INSTALL_DIRECTORY}/Frontend
+nodePath: ${BccWallet_INSTALL_DIRECTORY}/bcc-node
+launcherLogsPrefix: ${HOME}/Library/Application Support/Klarity Testnet/Logs/pub/
+walletArgs: []
+nodeDbPath: ${HOME}/Library/Application Support/Klarity Testnet/DB-1.0
+updaterPath: /usr/bin/open
+workingDir: ${HOME}/Library/Application Support/Klarity Testnet
+frontendOnlyMode: true
+nodeLogPath: null
+updaterArgs:
+- -FW
+logsPrefix: ${HOME}/Library/Application Support/Klarity Testnet/Logs
+configuration:
+  seed: null
+  filePath: ${BccWallet_INSTALL_DIRECTORY}/configuration.yaml
+  key: testnet_wallet_macos64
+  systemStart: null
+updateArchive: ${HOME}/Library/Application Support/Klarity Testnet/installer.pkg
+nodeLogConfig: ${BccWallet_INSTALL_DIRECTORY}/log-config-prod.yaml
+nodeTimeoutSec: 60
+tlsPath: ${HOME}/Library/Application Support/Klarity Testnet/tls
+x509ToolPath: ${BccWallet_INSTALL_DIRECTORY}/bcc-x509-certificates

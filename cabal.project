@@ -1,0 +1,86 @@
+#TODOadd repo tags-ensure full compat between tags
+index-state: 2021-07-27T00:00:00Z
+
+packages:
+  bcc-shell
+  bcc-launcher
+
+-- ---------------------------------------------------------
+-- Disable all tests by default
+
+tests: False
+
+test-show-details: direct
+
+-- Then enable specific tests in this repo
+
+package bcc-shell
+  tests: True
+
+package bcc-launcher
+  tests: True
+
+-- ---------------------------------------------------------
+
+-- The bcc-monitoring requires async-timer >= 0.2.0.0 but does not
+-- list this constraint in it's cabal file.
+constraints: async-timer >= 0.2.0.0
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-sl-x509
+  tag: 9fb452cbc978aadbb639dd09fdfb7a0be40a6469
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-prelude
+  tag: 583f26698d2a46b06ea251a4b3f1762d909f9ecb
+  
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-prelude
+  tag: 583f26698d2a46b06ea251a4b3f1762d909f9ecb
+  
+  subdir: test
+
+source-repository-package
+  type: git
+  location: http://github.com/well-typed/canonical-json
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/shardagnostic-network
+  tag: 
+  subdir: Win32-network
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-monitoring-framework
+  tag: 43126a6331879c69b1a129d8aa17777eb8405039
+  subdir: bcc-monitoring
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-monitoring-framework
+  tag: 43126a6331879c69b1a129d8aa17777eb8405039
+  subdir:   contra-tracer
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-monitoring-framework
+  tag: 43126a6331879c69b1a129d8aa17777eb8405039
+  subdir:   tracer-transformers
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/bcc-monitoring-framework
+  tag: 43126a6331879c69b1a129d8aa17777eb8405039
+  
+  subdir: tracer-transformers
+
+source-repository-package
+  type: git
+  location: https://github.com/The-Blockchain-Company/shardagnostic-network
+  
+  subdir: Win32-network

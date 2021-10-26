@@ -1,0 +1,38 @@
+#TODO add genesisblock hash
+{
+   "cliBin":"${BccWallet_INSTALL_DIRECTORY}\\jcli.exe",
+   "BccWalletBin":"${BccWallet_INSTALL_DIRECTORY}\\Klarity qa.exe",
+   "frontendOnlyMode":true,
+   "launcherLogsPrefix":"Logs\\pub",
+   "logsPrefix":"Logs",
+   "nodeArgs":[
+
+   ],
+   "nodeBin":"${BccWallet_INSTALL_DIRECTORY}\\jonah.exe",
+   "nodeImplementation":"jonah",
+   "nodeLogConfig":null,
+   "nodeLogPath":null,
+   "nodeTimeoutSec":60,
+   "stateDir":"${APPDATA}\\Klarity\\qa",
+   "tlsPath":null,
+   "updateArchive":"/bar",
+   "updateWindowsRunner":"Installer.bat",
+   "updaterArgs":[
+
+   ],
+   "updaterPath":"/foo",
+   "walletArgs":[
+      "launch",
+      "--genesis-block-hash",
+      "6a40cf890d84981353457fcab6c892af57ee3c3286b33b530cd46b1af5b0e3a7",
+      "--state-dir",
+      "${APPDATA}\\Klarity\\qa",
+      "--",
+      "--config",
+      "${BccWallet_INSTALL_DIRECTORY}\\jonah-config.yaml"
+   ],
+   "walletBin":"${BccWallet_INSTALL_DIRECTORY}\\klarity-jonah.exe",
+   "walletLogging":true,
+   "workingDir":"${APPDATA}\\Klarity\\qa",
+   "x509ToolPath":null
+}

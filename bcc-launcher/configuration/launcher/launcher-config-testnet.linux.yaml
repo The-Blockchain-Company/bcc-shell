@@ -1,0 +1,52 @@
+#TODO Klarity, x509 verify, aws
+walletLogging: false
+nodeArgs:
+- --tlsca
+- ${XDG_DATA_HOME}/Klarity/testnet/tls/server/ca.crt
+- --tlscert
+- ${XDG_DATA_HOME}/Klarity/testnet/tls/server/server.crt
+- --tlskey
+- ${XDG_DATA_HOME}/Klarity/testnet/tls/server/server.key
+- --no-client-auth
+- --log-console-off
+- --update-server
+- http://updates-bcc-testnet.s3.amazonaws.com
+- --keyfile
+- ${XDG_DATA_HOME}/Klarity/testnet/Secrets/secret.key
+- --topology
+- ${BccWallet_CONFIG}/wallet-topology.yaml
+- --wallet-db-path
+- ${XDG_DATA_HOME}/Klarity/testnet/Wallet
+- --update-latest-path
+- ${XDG_DATA_HOME}/Klarity/testnet/installer.sh
+- --wallet-address
+- 127.0.0.1:0
+- --update-with-package
+- --metrics
+- --ekg-server
+- localhost:8081
+- +RTS
+- -T
+- -RTS
+statePath: ${XDG_DATA_HOME}/Klarity/testnet
+walletPath: Klarity-frontend
+nodePath: bcc-node
+launcherLogsPrefix: ${XDG_DATA_HOME}/Klarity/testnet/Logs/
+walletArgs: []
+nodeDbPath: ${XDG_DATA_HOME}/Klarity/testnet/DB/
+updaterPath: /bin/update-runner
+workingDir: ${XDG_DATA_HOME}/Klarity/testnet
+frontendOnlyMode: true
+nodeLogPath: null
+updaterArgs: []
+logsPrefix: ${XDG_DATA_HOME}/Klarity/testnet/Logs
+configuration:
+  seed: null
+  filePath: ${BccWallet_CONFIG}/configuration.yaml
+  key: testnet_wallet_linux64
+  systemStart: null
+updateArchive: ${XDG_DATA_HOME}/Klarity/testnet/installer.sh
+nodeLogConfig: ${BccWallet_CONFIG}/log-config-prod.yaml
+nodeTimeoutSec: 60
+tlsPath: ${XDG_DATA_HOME}/Klarity/testnet/tls
+x509ToolPath: bcc-x509-certificates

@@ -1,0 +1,25 @@
+#TODO Klarity, chk 509 tool path
+# This is configuration that is used to manually test bcc-launcher on Windows
+walletLogging: false
+statePath: ${XDG_DATA_HOME}/Klarity/mainnet
+walletPath: ./Klarity.exe
+nodePath: bcc-node
+launcherLogsPrefix: ${XDG_DATA_HOME}/Klarity/mainnet/Logs/
+walletArgs: []
+nodeDbPath: ${XDG_DATA_HOME}/Klarity/mainnet/DB/
+workingDir: ./
+frontendOnlyMode: true
+nodeLogPath: null
+updaterArgs: []
+updaterPath: Installer.bat
+updateArchive: updater.exe
+logsPrefix: ${XDG_DATA_HOME}/Klarity/mainnet/Logs
+configuration:
+  seed: null
+  filePath: ./configuration/cert-configuration.yaml
+  key: dev
+  systemStart: null
+nodeLogConfig: ./configuration/log-configuration.yaml
+nodeTimeoutSec: 60
+tlsPath: "./configuration"
+x509ToolPath: bcc-x509-certificates

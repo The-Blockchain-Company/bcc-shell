@@ -1,0 +1,22 @@
+#TODOverify SL config below, BccX-Wallet
+dev:
+  tls:
+    ca:
+      organization: The-Blockchain-Company 
+      commonName: Bcc SL Self-Signed Root CA
+      expiryDays: 3650
+
+    server:
+      organization: The-Blockchain-Company
+      commonName: Bcc SL Server Node
+      expiryDays: 365
+      altDNS:
+        - "localhost"
+        - "localhost.localdomain"
+        - "127.0.0.1"
+        - "::1"
+
+    clients:
+      - organization: The-Blockchain-Company
+        commonName: The-Blockchain-Company Wallet
+        expiryDays: 365

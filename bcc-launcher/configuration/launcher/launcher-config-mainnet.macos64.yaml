@@ -1,0 +1,53 @@
+#TODO klarity, x509, aws
+walletLogging: true
+nodeArgs:
+- --tlsca
+- ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/tls/server/ca.crt
+- --tlscert
+- ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/tls/server/server.crt
+- --tlskey
+- ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/tls/server/server.key
+- --no-client-auth
+- --log-console-off
+- --update-server
+- http://updates-bcc-testnet.s3.amazonaws.com
+- --keyfile
+- ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/Secrets-1.0/secret.key
+- --topology
+- ${The-Blockchain-Company_INSTALL_DIRECTORY}/wallet-topology.yaml
+- --wallet-db-path
+- ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/Wallet-1.0
+- --update-latest-path
+- ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/installer.pkg
+- --wallet-address
+- 127.0.0.1:0
+- --update-with-package
+- --metrics
+- --ekg-server
+- localhost:8081
+- +RTS
+- -T
+- -RTS
+statePath: ${HOME}/Library/Application Support/The-Blockchain-Company Testnet
+walletPath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/Frontend
+nodePath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/bcc-node
+launcherLogsPrefix: ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/Logs/pub/
+walletArgs: []
+nodeDbPath: ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/DB-1.0
+updaterPath: /usr/bin/open
+workingDir: ${HOME}/Library/Application Support/The-Blockchain-Company Testnet
+frontendOnlyMode: true
+nodeLogPath: null
+updaterArgs:
+- -FW
+logsPrefix: ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/Logs
+configuration:
+  seed: null
+  filePath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/configuration.yaml
+  key: testnet_wallet_macos64
+  systemStart: null
+updateArchive: ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/installer.pkg
+nodeLogConfig: ${The-Blockchain-Company_INSTALL_DIRECTORY}/log-config-prod.yaml
+nodeTimeoutSec: 60
+tlsPath: ${HOME}/Library/Application Support/The-Blockchain-Company Testnet/tls
+x509ToolPath: ${The-Blockchain-Company_INSTALL_DIRECTORY}/bcc-x509-certificates
