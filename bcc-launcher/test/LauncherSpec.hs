@@ -107,13 +107,13 @@ instance Arbitrary WalletMode where
 -- Ideally, you want to test with the config file generated from Klarity CI
 -- but setting it up will be very tricky (credentials, etc.)
 --
--- TODO(KS): Currently moving the tests to check for the jonah config files
+-- TODO(KS): Currently moving the tests to check for the quibitous config files
 -- since this has (sudden) priority, otherwise we should sync this up for all config
 -- files.
 launcherDatas :: [FilePath]
 launcherDatas =
-    [ "jonah/launcher-config-qa.linux.yaml"
-    , "jonah/launcher-config-qa.windows.yaml"
+    [ "quibitous/launcher-config-qa.linux.yaml"
+    , "quibitous/launcher-config-qa.windows.yaml"
     ]
 
 --    [ "launcher-config-mainnet.linux.yaml"

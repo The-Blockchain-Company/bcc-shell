@@ -25,7 +25,7 @@ extra-deps:
     commit: efa4b5ecd7f0a13124616b12679cd42517cd905a
     subdirs:
       - contra-tracer
-      - bcccoin-monitoring
+      - tbco-monitoring
       - tracer-transformers
 #TODO add network repo
   - git: https://github.com/The-Blockchain-Company/shardagnostic-network

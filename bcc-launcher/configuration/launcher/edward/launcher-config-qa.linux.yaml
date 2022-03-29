@@ -8,8 +8,8 @@
    "nodeArgs":[
 
    ],
-   "nodeBin":"jonah",
-   "nodeImplementation":"jonah",
+   "nodeBin":"quibitous",
+   "nodeImplementation":"quibitous",
    "nodeLogConfig":null,
    "nodeLogPath":null,
    "nodeTimeoutSec":60,
@@ -29,9 +29,9 @@
       "${XDG_DATA_HOME}/Klarity/qa",
       "--",
       "--config",
-      "/nix/store/vvq4bwrhgj0xh8mwk8sc71f082sycb12-jonah-config-qa.yaml"
+      "/nix/store/vvq4bwrhgj0xh8mwk8sc71f082sycb12-quibitous-config-qa.yaml"
    ],
-   "walletBin":"klarity-jonah",
+   "walletBin":"klarity-quibitous",
    "walletLogging":true,
    "workingDir":"${XDG_DATA_HOME}/Klarity/qa",
    "x509ToolPath":null

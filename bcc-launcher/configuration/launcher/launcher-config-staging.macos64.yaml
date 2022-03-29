@@ -10,7 +10,7 @@ nodeArgs:
 - --no-client-auth
 - --log-console-off
 - --update-server
-- https://update-awstest.bcccoindev.io
+- https://update-awstest.tbcodev.io
 - --keyfile
 - ${HOME}/Library/Application Support/The-Blockchain-Company Staging/Secrets-1.0/secret.key
 - --topology

@@ -10,7 +10,7 @@ nodeArgs:
 - --no-client-auth
 - --log-console-off
 - --update-server
-- https://update-awstest.bcccoindev.io
+- https://update-awstest.tbcodev.io
 - --keyfile
 - ${XDG_DATA_HOME}/Klarity/staging/Secrets/secret.key
 - --topology

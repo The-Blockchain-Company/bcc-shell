@@ -8,8 +8,8 @@
    "nodeArgs":[
 
    ],
-   "nodeBin":"${BccWallet_INSTALL_DIRECTORY}\\jonah.exe",
-   "nodeImplementation":"jonah",
+   "nodeBin":"${BccWallet_INSTALL_DIRECTORY}\\quibitous.exe",
+   "nodeImplementation":"quibitous",
    "nodeLogConfig":null,
    "nodeLogPath":null,
    "nodeTimeoutSec":60,
@@ -29,9 +29,9 @@
       "${APPDATA}\\Klarity\\qa",
       "--",
       "--config",
-      "${BccWallet_INSTALL_DIRECTORY}\\jonah-config.yaml"
+      "${BccWallet_INSTALL_DIRECTORY}\\quibitous-config.yaml"
    ],
-   "walletBin":"${BccWallet_INSTALL_DIRECTORY}\\klarity-jonah.exe",
+   "walletBin":"${BccWallet_INSTALL_DIRECTORY}\\klarity-quibitous.exe",
    "walletLogging":true,
    "workingDir":"${APPDATA}\\Klarity\\qa",
    "x509ToolPath":null

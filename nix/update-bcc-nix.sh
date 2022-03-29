@@ -6,5 +6,5 @@ set -euo pipefail
 
 NIX_DIR=`dirname $0`
 
-nix-prefetch-git https://github.com/The-Blockchain-Company/bcccoin-nix \
-                 > $NIX_DIR/bcccoin-nix-src.json
+nix-prefetch-git https://github.com/The-Blockchain-Company/tbco-nix \
+                 > $NIX_DIR/tbco-nix-src.json

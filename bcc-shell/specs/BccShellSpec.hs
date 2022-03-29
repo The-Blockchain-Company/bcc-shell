@@ -8,7 +8,7 @@
 %subst blankline = "\nextline[1ex]'n"
 %endif
 
-\usepackage{bcccoin}
+\usepackage{tbco}
 \usepackage{mathpazo}
 % \usepackage{amsmath}
 \usepackage{semantic}
