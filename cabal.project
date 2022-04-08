@@ -29,18 +29,18 @@ constraints: async-timer >= 0.2.0.0
 source-repository-package
   type: git
   location: https://github.com/The-Blockchain-Company/bcc-sl-x509
-  tag: 9fb452cbc978aadbb639dd09fdfb7a0be40a6469
+  tag: 671dadd666a8de7a40d1a979347578b01a99f723
 
 source-repository-package
   type: git
   location: https://github.com/The-Blockchain-Company/bcc-prelude
-  tag: 583f26698d2a46b06ea251a4b3f1762d909f9ecb
+  tag: c1f053a9dbc2763ad2163281a356a2cf0f4d7858
   
 
 source-repository-package
   type: git
   location: https://github.com/The-Blockchain-Company/bcc-prelude
-  tag: 583f26698d2a46b06ea251a4b3f1762d909f9ecb
+  tag: c1f053a9dbc2763ad2163281a356a2cf0f4d7858
   
   subdir: test
 
